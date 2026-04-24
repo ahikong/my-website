@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>时空Ultra - 官方网站</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Microsoft YaHei",sans-serif;background:#070714;color:#fff;overflow-x:hidden}
+
+/* 导航 */
+.nav{position:fixed;top:0;left:0;right:0;height:70px;background:rgba(10,10,25,0.9);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between;padding:0 12%;z-index:999;border-bottom:1px solid rgba(255,255,255,0.05)}
+.logo{font-size:22px;font-weight:600;background:linear-gradient(90deg,#4fd1ff,#7a6cff);-webkit-background-clip:text;color:transparent}
+.menu a{color:#ccc;margin-left:28px;text-decoration:none;font-size:15px}
+.menu a:hover{color:#fff}
+
+/* 首屏 */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;position:relative;background:radial-gradient(circle at 50% 50%,#121230,#070714)}
+.hero::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(122,108,255,0.12),transparent 70%);animation:pulse 9s infinite alternate}
+@keyframes pulse{0%{transform:scale(1);opacity:.4}100%{transform:scale(1.35);opacity:.1}}
+.hero h1{font-size:62px;font-weight:700;background:linear-gradient(90deg,#4fd1ff,#7a6cff,#ff5fff);-webkit-background-clip:text;color:transparent;z-index:2;margin-bottom:12px}
+.hero p{font-size:18px;color:#aaa;max-width:600px;line-height:1.8;z-index:2;margin-bottom:35px}
+
+/* 按钮样式 */
+.btn{padding:14px 36px;background:linear-gradient(90deg,#7a6cff,#4fd1ff);border:none;border-radius:12px;color:#fff;font-size:16px;font-weight:500;cursor:pointer;z-index:2;text-decoration:none}
+.btn:hover{opacity:.9}
+.btn-qq{background:linear-gradient(90deg,#12B7F5,#0099CC);margin-left:12px}
+
+/* 按钮组（并排） */
+.btn-group{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;z-index:2}
+
+/* 公告 */
+.notice{padding:80px 12%;background:rgba(10,10,25,0.5)}
+.section-title{text-align:center;font-size:32px;font-weight:600;margin-bottom:40px}
+.notice-box{background:rgba(122,108,255,0.08);border:1px solid rgba(122,108,255,0.2);border-radius:14px;padding:24px 28px}
+.notice-box p{color:#ccc;line-height:1.9;font-size:15px}
+
+/* 功能 */
+.features{padding:80px 12%}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:rgba(15,15,35,0.6);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:32px 24px}
+.card h3{font-size:20px;margin-bottom:12px;color:#fff}
+.card p{color:#aaa;line-height:1.7}
+
+/* 下载 */
+.download{padding:80px 12%;background:rgba(10,10,25,0.5);text-align:center}
+
+/* 联系 */
+.contact{padding:80px 12%}
+.contact-box{text-align:center}
+.contact-box p{color:#ccc;font-size:16px;line-height:1.8}
+
+/* 底部 */
+.footer{padding:50px 20px;text-align:center;color:#777;font-size:14px;border-top:1px solid rgba(255,255,255,0.05)}
+
+@media(max-width:900px){
+.nav{padding:0 20px}
+.grid{grid-template-columns:1fr}
+.hero h1{font-size:36px}
+.section-title{font-size:26px}
+.btn-group{flex-direction:column}
+.btn-qq{margin-left:0}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 导航 -->
+<div class="nav">
+<div class="logo">时空Ultra</div>
+<div class="menu">
+<a href="#home">首页</a>
+<a href="#notice">公告</a>
+<a href="#feature">功能</a>
+<a href="#contact">联系我们</a>
+</div>
+</div>
+
+<!-- 首屏 -->
+<section class="hero" id="home">
+<h1>时空Ultra</h1>
+<p>极致性能 | 超强内核 | 稳定流畅 | 官方正版</p>
+<div class="btn-group">
+<a href="#download" class="btn">立即下载</a>
+<a href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=337471980&card_type=group&source=qrcode" class="btn btn-qq" target="_blank">加入QQ群</a>
+</div>
+</section>
+
+<!-- 公告 -->
+<section class="notice" id="notice">
+<h2 class="section-title">官方公告</h2>
+<div class="notice-box">
+<p>• 时空Ultra 正式版已发布，全机型深度兼容</p>
+<p>• 提升启动速度、运行稳定性，优化交互体验</p>
+<p>• 官方唯一渠道，谨防盗版与修改版本</p>
+<p>• 问题反馈请前往官方QQ群，我们会第一时间处理</p>
+</div>
+</section>
+
+<!-- 功能 -->
+<section class="features" id="feature">
+<h2 class="section-title">核心功能</h2>
+<div class="grid">
+<div class="card"><h3>极致性能</h3><p>深度优化底层调度，让设备性能全面释放，更稳更快。</p></div>
+<div class="card"><h3>超强内核</h3><p>专属定制内核，高效执行，低耗流畅，体验大幅提升。</p></div>
+<div class="card"><h3>官方稳定</h3><p>正版官方维护，无广告、无捆绑，安全可靠长久使用。</p></div>
+</div>
+</section>
+
+<!-- 下载区域 → 两个并排按钮 -->
+<section class="download" id="download">
+<h2 class="section-title">官方下载</h2>
+<div class="btn-group">
+<!-- 下载链接占位符，后续把 javascript:void(0) 换成你的真实下载地址 -->
+<a href="javascript:void(0)" class="btn" download="时空Ultra.apk">下载最新版</a>
+<a href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=337471980&card_type=group&source=qrcode" class="btn btn-qq" target="_blank">加入官方QQ群</a>
+</div>
+</section>
+
+<!-- 联系 -->
+<section class="contact" id="contact">
+<h2 class="section-title">官方交流群</h2>
+<div class="contact-box">
+<p> 官方QQ群：<strong>337471980</strong></p>
+<p> 官方唯一官网：时空Ultra 正版网站</p>
+<p> 感谢您支持与使用 时空Ultra</p>
+</div>
+</section>
+
+<!-- 底部 -->
+<div class="footer">
+© 2026 时空Ultra 官方网站 保留所有权利
+</div>
+
+</body>
+</html>
